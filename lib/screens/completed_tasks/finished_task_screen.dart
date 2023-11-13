@@ -42,6 +42,13 @@ class FinishedTasks extends StatelessWidget {
                           ),
                         ));
                   },
+                  deleteTaskFunction: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return DeleteTaskScreen(taskId: document.id);
+                        });
+                  },
                 );
               }).toList(),
             );

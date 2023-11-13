@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:script_05_task_tracker_app/app.dart';
 import 'package:script_05_task_tracker_app/widgets/widget_export.dart';
 
 class EditTaskScreen extends StatefulWidget {
@@ -152,6 +153,7 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
                 final taskTag = taskTagEditingController.text;
 
                 updateTask(
+                  context,
                   taskTitle,
                   taskTag,
                   initialDate,
@@ -160,7 +162,10 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
                   finalTime,
                   taskDescription,
                 );
-                Navigator.of(context, rootNavigator: true).pop();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AppHome()),
+                );
               } else {
                 ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                   behavior: SnackBarBehavior.floating,
@@ -173,11 +178,13 @@ class _EditTaskScreenState extends State<EditTaskScreen> {
     ));
   }
 
-  Future updateTask(taskTitle, taskTag, initialDate, initialTime, finalDate,
-      finalTime, taskDescription) async {
+  Future updateTask(BuildContext context, taskTitle, taskTag, initialDate,
+      initialTime, finalDate, finalTime, taskDescription) async {
     CollectionReference taskCollection =
         FirebaseFirestore.instance.collection('tasks');
+
     await taskCollection.doc(widget.taskId).update({
+      'taskTitle': taskTitle,
       'taskTag': taskTag,
       'initialDate': initialDate,
       'initialTime': initialTime,

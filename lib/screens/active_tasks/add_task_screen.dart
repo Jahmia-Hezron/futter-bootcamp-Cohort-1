@@ -30,7 +30,7 @@ class _AddTaskState extends State<AddTask> {
     CollectionReference taskCollection =
         FirebaseFirestore.instance.collection('tasks');
 
-    String documentId = taskTitle;
+    String documentId = taskCollection.doc().id;
     await taskCollection.doc(documentId).set({
       'taskTitle': taskTitle,
       'initialDate': initialDate,

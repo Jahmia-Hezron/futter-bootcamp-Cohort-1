@@ -12,6 +12,10 @@ class DeleteTaskScreen extends StatelessWidget {
 
   Future deleteTask() async {
     await FirebaseFirestore.instance.collection('tasks').doc(taskId).delete();
+    await FirebaseFirestore.instance
+        .collection('completed_tasks')
+        .doc(taskId)
+        .delete();
   }
 
   @override

@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 
 class CompletedTaskCard extends StatelessWidget {
-  const CompletedTaskCard(
-      {super.key,
-      required this.title,
-      required this.subtitle,
-      required this.color,
-      required this.viewTaskFunction,
-      required this.subtitleDate});
+  const CompletedTaskCard({
+    super.key,
+    required this.title,
+    required this.subtitle,
+    required this.color,
+    required this.viewTaskFunction,
+    required this.deleteTaskFunction,
+    required this.subtitleDate,
+  });
 
   final String title;
   final String subtitle;
   final Color color;
   final String subtitleDate;
   final dynamic viewTaskFunction;
+  final dynamic deleteTaskFunction;
 
   @override
   Widget build(BuildContext context) {
@@ -72,6 +75,11 @@ class CompletedTaskCard extends StatelessWidget {
                 value: '1',
                 onTap: viewTaskFunction,
                 child: const Text('View'),
+              ),
+              PopupMenuItem(
+                value: '2',
+                onTap: deleteTaskFunction,
+                child: const Text('Delete'),
               ),
             ];
           },

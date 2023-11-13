@@ -52,14 +52,14 @@ This is a simple Flutter task tracker app that utilizes Firebase for authenticat
    
     - flutter run
 
-###Configuration
+### Configuration
  - Update the Firebase configuration in the app. Locate the google-services.json file for Android and 
  - GoogleService-Info.plist for iOS, and replace them with your own Firebase project configuration files.
 
-###Contributing
+### Contributing
  - Feel free to contribute to this project by opening issues and pull requests. Your contributions are highly appreciated!
 
-###License
+### License
  - This project is licensed under the MIT License - see the LICENSE file for details.
 
 
