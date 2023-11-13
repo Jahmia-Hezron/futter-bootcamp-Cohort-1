@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "460955121194",
+    "project_id": "task-tracker-a5914",
+    "storage_bucket": "task-tracker-a5914.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460955121194:android:dbd6252fc36fb62e1ab553",
+        "android_client_info": {
+          "package_name": "com.example.script_05_task_tracker_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe7jz49MoI0Okp2R-loj3tSYa5UkHsvrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
