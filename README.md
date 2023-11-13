@@ -41,13 +41,16 @@ This is a simple Flutter task tracker app that utilizes Firebase for authenticat
    git clone https://github.com/your-username/your-task-tracker-app.git
 
 2. Navigate to the project folder:
-    cd your-task-tracker-app
+   
+    - cd your-task-tracker-app
 
-3. Install dependencies:
-    flutter pub get
+4. Install dependencies:
+   
+    - flutter pub get
 
-4. Run the app:
-    flutter run
+6. Run the app:
+   
+    - flutter run
 
 ###Configuration
  - Update the Firebase configuration in the app. Locate the google-services.json file for Android and 
